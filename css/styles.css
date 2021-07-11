@@ -2,12 +2,17 @@
 
 @font-face {
     font-family: "LaPaloma";
-    src: url("../assets/fonts/LaPaloma.ttf") format("truetype");
+    src:	url("../assets/fonts/La-Paloma.woff") format("woff"),
+			url("../assets/fonts/La-Paloma.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Mistral";
-    src: url("../assets/fonts/MISTRAL.TTF") format("truetype");
+    src:	url("../assets/fonts/subset-Mistral.woff2") format("woff2"),
+			url("../assets/fonts/subset-Mistral.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
