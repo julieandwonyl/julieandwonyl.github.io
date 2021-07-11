@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "LaPaloma";
+    src: url("../assets/fonts/LaPaloma.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Mistral";
+    src: url("../assets/fonts/MISTRAL.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "MaruBuri-Regular";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.masthead {
+  min-height: 30rem;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+.masthead h1, .masthead .h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 992px) {
+  .masthead {
+    height: 100vh;
+  }
+  .masthead h1, .masthead .h1 {
+    font-size: 5.5rem;
+  }
+}
+
+.frontmatter {
+	height: 100vh;
+	background-color: rgb(21, 41, 77);
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}
+.title {
+	width: 60vh;
+	height: 85vh;
+	min-width: 450px;
+	background-image: url("../assets/img/title_background.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	color: rgb(247, 244, 239);
+	position:relative;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}
+.title_foreground {
+	position:absolute;
+	top: -8em; left: 0;
+	width: 100%; height: 100%;
+	background-image: url("../assets/img/gold-splatter.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.title_text {
+	width: 90%;
+	font-family: "LaPaloma";
+	text-align: center;
+	position: relative;
+}
+.title_julie {
+	margin-top: 1em;
+	font-size: 3.8em;
+	text-align: left;
+	transform: rotate(-12deg);
+}
+.title_wonyl {
+	margin-top: 1em;
+	font-size: 3.8em;
+	text-align: right;
+	transform: rotate(-12deg);
+}
+.title_symbol {
+	font-family: "Mistral";
+	font-size: 7em;
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: rotate(-12deg) translate(-50%, -50%)
+}
