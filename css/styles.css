@@ -86,7 +86,7 @@ body {
 .title {
 	width: 60vh;
 	height: 85vh;
-	min-width: 450px;
+	min-width: 360px;
 	background-image: url("../assets/img/title_background-min.png");
 	background-position: center center;
 	background-repeat: no-repeat;
