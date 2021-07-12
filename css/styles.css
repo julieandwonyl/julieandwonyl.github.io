@@ -17,7 +17,11 @@
 
 @font-face {
     font-family: "MaruBuri-Regular";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff") format("woff");
+    src:	url("../assets/fonts/MaruBuri-Regular.woff2") format("woff2"),
+			url("../assets/fonts/MaruBuri-Regular.otf") format("opentype"),
+			url("../assets/fonts/MaruBuri-Regular.woff") format("woff"),
+		    url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff") format("woff"),
+			url("../assets/fonts/MaruBuri-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
@@ -40,6 +44,12 @@ html {
   }
 }
 
+html {
+	scroll-snap-type: mandatory;
+	scroll-snap-points-y: repeat(100vh);
+	scroll-snap-type: y mandatory;
+}
+
 body {
   margin: 0;
   font-size: 1rem;
@@ -51,42 +61,24 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.masthead {
-  min-height: 30rem;
-  position: relative;
-  display: table;
-  width: 100%;
-  height: auto;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-}
-.masthead h1, .masthead .h1 {
-  font-size: 4rem;
-  margin: 0;
-  padding: 0;
-}
-
-@media (min-width: 992px) {
-  .masthead {
-    height: 100vh;
-  }
-  .masthead h1, .masthead .h1 {
-    font-size: 5.5rem;
-  }
-}
-
-.frontmatter {
+section {
 	height: 100vh;
-	background-color: rgb(21, 41, 77);
+	width: 100vw;
+	scroll-snap-align: start;
 	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center; 
 }
+
+.frontmatter {
+	background-color: rgb(21, 41, 77);
+}
+
 .title {
 	width: 60vh;
 	height: 85vh;
-	min-width: 360px;
+	min-width: 355px;
 	background-image: url("../assets/img/title_background-min.png");
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -97,6 +89,7 @@ body {
 	justify-content: center;
 	align-items: center; 
 }
+
 .title_foreground {
 	position:absolute;
 	top: -8em; left: 0;
@@ -106,28 +99,74 @@ body {
 	background-repeat: no-repeat;
 	background-size: contain;
 }
+
 .title_text {
 	width: 90%;
 	font-family: "LaPaloma";
 	text-align: center;
 	position: relative;
 }
+
 .title_julie {
 	margin-top: 1em;
 	font-size: 3.8em;
 	text-align: left;
 	transform: rotate(-12deg);
 }
+
 .title_wonyl {
 	margin-top: 1em;
 	font-size: 3.8em;
 	text-align: right;
 	transform: rotate(-12deg);
 }
-.title_symbol {
+
+.symbol {
 	font-family: "Mistral";
+}
+
+.title_symbol {
 	font-size: 7em;
 	position: absolute;
 	top: 50%; left: 50%;
 	transform: rotate(-12deg) translate(-50%, -50%)
+}
+
+.content-section{
+	font-family: MaruBuri-Regular;
+	font-size: calc(1em + 5vmin / 20);
+	color: #383838;
+	
+}
+
+.invitation-message {
+	
+}
+
+.invitation-message > div {
+	width: 80%;
+	max-width: 640px;
+	min-height: 400px;
+	max-height: 95vh;
+	margin: auto;
+	padding: 1vh 2vw;
+	word-break: keep-all;
+	line-height: 2;
+}
+
+.sign {
+	text-align: center;
+}
+
+.sign em {
+	font-style: normal;
+	font-size: larger;
+	color: #202020;
+}
+
+text.symbol {
+	margin-left: 3vmin;
+	margin-right: 3vmin;
+	font-size: 3rem;
+	color: silver;
 }
