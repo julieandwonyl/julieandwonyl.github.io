@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: "LaPaloma";
-    src:	url("../assets/fonts/La-Paloma.woff") format("woff"),
-			url("../assets/fonts/La-Paloma.ttf") format("truetype");
+	src: 	url("../assets/fonts/La-Paloma.woff") format("woff"),
+			url("../assets/fonts/La-Paloma.ttf") format("truetype")
 }
 
 @font-face {
@@ -56,7 +56,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #fff;
+  background-color: rgb(251, 243, 235);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -65,20 +65,19 @@ section {
 	height: 100vh;
 	width: 100vw;
 	scroll-snap-align: start;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center; 
+	position: relative; 
 }
 
 .frontmatter {
 	background-color: rgb(21, 41, 77);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .title {
 	width: 60vh;
 	height: 85vh;
-	min-width: 355px;
 	background-image: url("../assets/img/title_background-min.png");
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -132,41 +131,77 @@ section {
 	transform: rotate(-12deg) translate(-50%, -50%)
 }
 
-.content-section{
+.content-section {
 	font-family: MaruBuri-Regular;
 	font-size: calc(1em + 5vmin / 20);
-	color: #383838;
+	color: #555555;
+	text-shadow: 0px 0px 1.5px #636363;
 	
 }
 
-.invitation-message {
-	
-}
-
-.invitation-message > div {
-	width: 80%;
+.content-section > div {
+	word-break: keep-all;
+	line-height: 2;
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
 	max-width: 640px;
 	min-height: 400px;
 	max-height: 95vh;
 	margin: auto;
 	padding: 1vh 2vw;
-	word-break: keep-all;
-	line-height: 2;
+}
+
+.invitation-message > div {
+	width: 80%;
 }
 
 .sign {
 	text-align: center;
+	line-height: 1;
+	margin-top: 5vh;
 }
 
 .sign em {
 	font-style: normal;
 	font-size: larger;
+	margin-left: 1vmin;
 	color: #202020;
+	text-shadow: 0px 0px 1.2px #404040;
 }
 
 text.symbol {
-	margin-left: 3vmin;
-	margin-right: 3vmin;
-	font-size: 3rem;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	font-size: 7vmin;
+	text-shadow: 0px 0px 2px #909090;
 	color: silver;
+}
+
+.calendar {
+	background-color: color: #212529;
+	text-align: center;
+	color: rgb(21, 41, 77);
+	text-shadow: 0px 0px 1px  rgb(21, 41, 77);
+	font-family: "Constantia";
+	font-weight: 600;
+	font-variant: small-caps;
+	padding-bottom: 30%
+}
+
+.calendar div {
+	line-height: 1;
+	font-size: calc(1em + 2vh);
+}
+.calendar .day {
+	font-size: calc(2em + 4vh);
+}
+.calendar .dow {
+	font-size: .2vh;
+	line-height: 0;
+}
+
+.info-text {
+	min-width: 200px;
+	padding-bottom: 30%
 }

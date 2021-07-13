@@ -18,6 +18,7 @@
 		<link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
+		<div class="main">
 		<section class="frontmatter">
 			<div class="title">
 				<div class="title_foreground"></div>
@@ -49,27 +50,42 @@
 				</div>
 				<div class="sign">
 					<p>
-					<sup>신랑</sup> <em>최원일</em>
-					<text class="symbol">&</text>
-					<sup>신부</sup> <em>박쥴리</em>
+					<sup>신랑</sup><em>최원일</em> 
+					<text class="symbol">&</text> 
+					<sup>신부</sup><em>박쥴리</em>
 					</p>
 				</div>
 			</div>
 		</section>
 		<section class="content-section info">
 			<div>
-				<div>
-					2021.12.18.
+				<div class="calendar">
+					<div class="month">Dec</div>
+					<div class="day">18</div>
+					<div class="dow">( Sat. )</div>
+					<div class="year">2021</div>
 				</div>
-				<div>
+				<div class="info-text">
 					<p>
-						해가 질 무렵의 다섯 시 반,<br>
+						해가 질 무렵의 다섯시 반,<br>
 						서울 명동의 르와지르 호텔 마지막 층.
 					</p>
 				</div>
 			</div>
 		</section>
 		<section>
+			<div id="map"></div>
+			<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	bb3ffaece245593330e33be49a9382db"></script>
+			<script>
+				var container = document.getElementById('map');
+				var options = {
+					center: new kakao.maps.LatLng(33.450701, 126.570667),
+					level: 3
+				};
+
+				var map = new kakao.maps.Map(container, options);
+			</script>
 		</section>
+	</div>
     </body>
 </html>
