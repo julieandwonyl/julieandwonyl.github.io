@@ -181,7 +181,7 @@ text.symbol {
 	font-weight: 600;
 	font-variant: small-caps;
 	padding: 30% 0;
-	padding-bottom: calc(25% + 20vh);
+	padding-bottom: 30vh;
 }
 
 .calendar > div {
