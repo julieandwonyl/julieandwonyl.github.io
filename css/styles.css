@@ -106,16 +106,6 @@ section {
 	opacity: .8;
 }
 
-.title_foreground {
-	position:absolute;
-	top: -8em; left: 0;
-	width: 100%; height: 100%;
-	background-image: url("../assets/img/gold-splatter-min.png");
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: contain;
-}
-
 .title_text {
 	width: 90%;
 	font-family: "LaPaloma";
@@ -207,13 +197,8 @@ text.symbol {
 }
 
 .info .image{
-	background-image: url("../assets/img/DSC05955-crop-min.jpg");
-	background-position: right bottom;
-	filter: blur(2px);
-   -webkit-filter: blur(2px);
-   -moz-filter: blur(2px);
-   -o-filter: blur(2px);
-   -ms-filter: blur(2px);
+	background-image: url("../assets/img/DSC05889-crop-min.jpg");
+	background-position: center;
 }
 
 .calendar {
@@ -247,6 +232,11 @@ text.symbol {
 .info-text {
 	min-width: 200px;
 	padding-bottom: 30%
+}
+
+.info-text span {
+	padding: .8em;
+	background-color: rgb(235, 203, 185);
 }
 
 .contact .image {
