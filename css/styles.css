@@ -70,6 +70,10 @@ section {
 
 .frontmatter {
 	background-color: rgb(21, 41, 77);
+	background-image: url("../assets/img/bg-masthead-min.jpg");
+	background-position: center center;
+	background-size: cover;
+	background-overflow: hidden;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -86,7 +90,8 @@ section {
 	position:relative;
 	display: flex;
 	justify-content: center;
-	align-items: center; 
+	align-items: center;
+	opacity: .8;
 }
 
 .title_foreground {
@@ -133,7 +138,7 @@ section {
 
 .content-section {
 	font-family: MaruBuri-Regular;
-	font-size: calc(1em + 5vmin / 20);
+	font-size: calc(.5em + 1.2vmin);
 	color: #555555;
 	text-shadow: 0px 0px 1.5px #636363;
 	
@@ -146,14 +151,27 @@ section {
 	top: 50%; left: 50%;
 	transform: translate(-50%, -50%);
 	max-width: 640px;
-	min-height: 400px;
 	max-height: 95vh;
 	margin: auto;
 	padding: 1vh 2vw;
 }
 
-.invitation-message > div {
-	width: 80%;
+.invitation-message .image {
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	max-height: 100%;
+	background-image: url("../assets/img/DSC05587-dark.jpg");
+	background-position: center center;
+	background-size: cover;
+	background-overflow: hidden;
+}
+
+.invitation-message .message {
+	width: calc(250px + 12vw);
+	background: rgb(251 243 235 / 85%);
+	box-shadow: 0px 0px 5px rgb(251 243 235);
+	z-index: 2;
 }
 
 .sign {
@@ -173,9 +191,25 @@ section {
 text.symbol {
 	margin-left: 2.5%;
 	margin-right: 2.5%;
-	font-size: 7vmin;
+	font-size: 5vmin;
 	text-shadow: 0px 0px 2px #909090;
 	color: silver;
+}
+
+.info .image{
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	max-height: 100%;
+	background-image: url("../assets/img/DSC05955-crop.jpg");
+	background-position: right bottom;
+	background-size: cover;
+	background-overflow: hidden;
+	filter: blur(2px);
+   -webkit-filter: blur(2px);
+   -moz-filter: blur(2px);
+   -o-filter: blur(2px);
+   -ms-filter: blur(2px);
 }
 
 .calendar {
@@ -204,4 +238,12 @@ text.symbol {
 .info-text {
 	min-width: 200px;
 	padding-bottom: 30%
+}
+
+#map {
+	background-color: red;
+	width: 50vmin;
+	height: 50vmin;
+	min-width: 300px;
+	min-height: 300px;
 }
