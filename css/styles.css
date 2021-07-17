@@ -92,46 +92,18 @@ section {
 }
 
 .title {
-	width: 60vh;
-	height: 85vh;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: contain;
+	width: 90vw;
+	height: 90vh;
 	color: rgb(10 10 10);
-	position:relative;
+	opacity: .8;
+	font-family: "LaPaloma";
+	text-align: center;
+	vertical-align: middle;
+	padding: 10vmin;
+	font-size: calc(.5em + 8vmin);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	opacity: .8;
-}
-
-.title_text {
-	width: 90%;
-	font-family: "LaPaloma";
-	text-align: center;
-	position: relative;
-	font-size: 4rem;
-}
-
-.title_julie {
-	margin-top: 1em;
-	font-size: 3.8em;
-	text-align: left;
-	transform: rotate(-12deg);
-}
-
-.title_wonyl {
-	margin-top: 1em;
-	font-size: 3.8em;
-	text-align: right;
-	transform: rotate(-12deg);
-}
-
-.title_symbol {
-	font-size: 7em;
-	position: absolute;
-	top: 50%; left: 50%;
-	transform: rotate(-12deg) translate(-50%, -50%)
 }
 
 .content-section {
@@ -171,7 +143,7 @@ section {
 }
 
 .invitation-message .image {
-	background-image: url("../assets/img/DSC05587-dark-min.jpg");
+	background-image: url("../assets/img/DSC05587-min.jpg");
 }
 
 .sign {
@@ -197,7 +169,7 @@ text.symbol {
 }
 
 .info .image{
-	background-image: url("../assets/img/DSC05460.jpg");
+	background-image: url("../assets/img/DSC05460-min.jpg");
 	background-position: center;
 }
 
@@ -209,7 +181,7 @@ text.symbol {
 	font-weight: 600;
 	font-variant: small-caps;
 	padding: 30% 0;
-	padding-bottom: calc(30% + 30vh);
+	padding-bottom: calc(25% + 20vh);
 }
 
 .calendar > div {
