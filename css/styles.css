@@ -94,11 +94,10 @@ section {
 .title {
 	width: 60vh;
 	height: 85vh;
-	background-image: url("../assets/img/title_background-min.png");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: contain;
-	color: rgb(247, 244, 239);
+	color: rgb(235 203 185 / 85%);
 	position:relative;
 	display: flex;
 	justify-content: center;
@@ -111,6 +110,7 @@ section {
 	font-family: "LaPaloma";
 	text-align: center;
 	position: relative;
+	font-size: 4em;
 }
 
 .title_julie {
