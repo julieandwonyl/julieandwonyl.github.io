@@ -97,7 +97,7 @@ section {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: contain;
-	color: rgb(10 10 10 / 85%);
+	color: rgb(10 10 10);
 	position:relative;
 	display: flex;
 	justify-content: center;
@@ -110,7 +110,7 @@ section {
 	font-family: "LaPaloma";
 	text-align: center;
 	position: relative;
-	font-size: 4em;
+	font-size: 4rem;
 }
 
 .title_julie {
