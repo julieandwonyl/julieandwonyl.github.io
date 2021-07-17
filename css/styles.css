@@ -83,7 +83,7 @@ section {
 .frontmatter {
 	background-color: rgb(21, 41, 77);
 	background-image: url("../assets/img/bg-masthead-min.jpg");
-	background-position: center center;
+	background-position: center;
 	background-size: cover;
 	background-overflow: hidden;
 	display: flex;
@@ -154,7 +154,7 @@ section {
 }
 
 .content-section .card {
-	width: calc(250px + 12vw);
+	width: calc(200px + 10vw);
 	background: rgb(251 243 235 / 85%);
 	box-shadow: 0px 0px 5px rgb(251 243 235);
 	z-index: 2;
@@ -197,7 +197,7 @@ text.symbol {
 }
 
 .info .image{
-	background-image: url("../assets/img/DSC05889-crop-min.jpg");
+	background-image: url("../assets/img/DSC05460.jpg");
 	background-position: center;
 }
 
@@ -208,7 +208,8 @@ text.symbol {
 	font-family: "Bona Nova";
 	font-weight: 600;
 	font-variant: small-caps;
-	padding-bottom: 30%;
+	padding: 30% 0;
+	padding-bottom: calc(30% + 30vh);
 }
 
 .calendar > div {
@@ -231,12 +232,9 @@ text.symbol {
 
 .info-text {
 	min-width: 200px;
-	padding-bottom: 30%
-}
-
-.info-text span {
-	padding: .8em;
-	background-color: rgb(235, 203, 185);
+	text-align: center;
+	background: rgb(251 243 235 / 45%);
+	box-shadow: 0px 0px 5px rgb(251 243 235 / 45%);
 }
 
 .contact .image {
@@ -255,8 +253,8 @@ text.symbol {
 	background-position: center center;
 	background-size: contain;
 	background-repeat: no-repeat;
-	width: calc(200px + 10vw);
-	height: calc(11.25*(200px + 10vw)/17);
+	width: calc(180px + 8vw);
+	height: calc(11.25*(180px + 8vw)/17);
 	position: relative;
 }
 
