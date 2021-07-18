@@ -180,6 +180,18 @@ section {
 	
 }
 
+@media only screen and (max-height: 389px){
+	
+	.invitation-message .image {
+		background-image: url("../assets/img/DSC05587-min-mobile-landscape.jpg");
+	}
+
+	.contact .image {
+		background-image: url("../assets/img/DSC05990-min-mobile-landscape.jpg");
+	}
+	
+}
+
 .sign {
 	text-align: center;
 	line-height: 1;
