@@ -327,3 +327,9 @@ section {
 #direction {
 	font-size: smaller;
 }
+
+#direction .icon {
+	width: 1.8vmin;
+	height: 1.8vmin;
+	opacity: .7;
+}
