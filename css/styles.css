@@ -48,6 +48,7 @@ html {
 	scroll-snap-type: mandatory;
 	scroll-snap-points-y: repeat(99.998vh);
 	scroll-snap-type: y mandatory;
+	min-height: 100%
 }
 
 body {
@@ -142,6 +143,9 @@ section {
 .content-section .image {
 	width: 100vw;
 	height: 100vh;
+	min-width: 100%;
+	min-height: 100%;
+	margin-top: 1px;
 	background-position: center;
 	background-size: cover;
 	background-overflow: hidden;
