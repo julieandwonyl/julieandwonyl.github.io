@@ -26,22 +26,22 @@
     font-style: normal;
 }
 
-body,
-html {
-  width: 100%;
-  height: 100%;
+body, html {
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  :root {
-    scroll-behavior: smooth;
-  }
+	:root {
+		scroll-behavior: smooth;
+	}
 }
 
 html {
@@ -57,14 +57,15 @@ html {
 }
 
 body {
-  margin: 0;
+	margin: 0;
+	overflow-x: hidden;
 }
 
 ::selection {
-  background: rgb(235, 203, 185); /* WebKit/Blink Browsers */
+	background: rgb(235, 203, 185); /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
-  background: rgb(235, 203, 185); /* Gecko Browsers */
+	background: rgb(235, 203, 185); /* Gecko Browsers */
 }
 
 .symbol {
@@ -87,7 +88,6 @@ section {
 	text-shadow: 0px 0px 1.5px #636363;
 	word-break: keep-all;
 	
-	background-color: rgb(21, 41, 77);
 	background-position: center;
 	background-size: cover;
 	background-overflow: hidden;
@@ -95,7 +95,7 @@ section {
 	justify-content: center;
 	align-items: center;
 	
-	scroll-snap-align: center;
+	scroll-snap-align: start;
 	flex: none;
 	position: relative; 
 }
@@ -119,6 +119,7 @@ section {
 }
 
 .frontmatter {
+	background-color: rgb(21, 41, 77);
 	background-image: url("../assets/img/bg-masthead-min.jpg");
 }
 
@@ -136,8 +137,13 @@ section {
 
 @media only screen and (max-width: 389px) {
 	
+	html {
+		scroll-snap-points-y: repeat(99.998vh);
+		scroll-snap-type: y proximity;
+	}
+	
 	.invitation-message {
-		background-image: url("../assets/img/DSC05587-min-mobile.jpg");
+		background-image: None; /* url("../assets/img/DSC05587-min-mobile.jpg"); */
 	}
 
 	.info {
@@ -145,7 +151,7 @@ section {
 	}
 
 	.contact {
-		background-image: url("../assets/img/DSC05990-min-mobile.jpg");
+		background-image: None; /* url("../assets/img/DSC05990-min-mobile.jpg"); */
 	}
 	
 }
@@ -172,17 +178,19 @@ section {
 }
 
 .title {
-	width: 99vw;
-	height: 99vh;
-	color: #bbbbbb;
-	opacity: .75;
+	width: 100%;
+	height: 100%;
+	color: #ffffff;
+	opacity: .65;
 	font-family: "LaPaloma";
 	font-weight: 700;
-	font-size: calc(.5rem + 10vmin);
+	font-size: calc(1rem + 12vmin);
 	text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: #101030;
+	background-image: url("../assets/img/stars.jpg")
 }
 
 .invitation-message {
@@ -192,7 +200,7 @@ section {
 .sign {
 	text-align: center;
 	line-height: 1;
-	margin-top: 5vmin;
+	margin-top: calc(5vmin + 5vh);
 }
 
 .sign em {
@@ -330,6 +338,7 @@ section {
 
 #loc, #address, #direction {
 	padding: 0 3%;
+	margin-bottom: 1.5vh;
 }
 
 #loc .loc-name {
