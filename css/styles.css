@@ -45,22 +45,19 @@ html {
 }
 
 html {
-	scroll-snap-type: mandatory;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #212529;
+	background-color: rgb(251, 243, 235);
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	scroll-snap-points-y: repeat(99.998vh);
 	scroll-snap-type: y mandatory;
-	min-height: 100%
 }
 
 body {
   margin: 0;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  background-color: rgb(251, 243, 235);
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  overflow-x: hidden;
 }
 
 ::selection {
@@ -74,48 +71,45 @@ body {
 	font-family: "Mistral";
 }
 
-section {
-	width: 100vw;
-	height: 100vh;
-	scroll-snap-align: center;
-	flex: none;
-	position: relative; 
+.force-center {
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
 }
 
-.frontmatter {
+section {
+	width: 100vw;
+	height: 100.02vh;
+	
+	font-family: MaruBuri-Regular;
+	font-size: calc(.7rem + .8vmin);
+	color: #555555;
+	text-shadow: 0px 0px 1.5px #636363;
+	word-break: keep-all;
+	
 	background-color: rgb(21, 41, 77);
-	background-image: url("../assets/img/bg-masthead-min.jpg");
 	background-position: center;
 	background-size: cover;
 	background-overflow: hidden;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	
+	scroll-snap-align: center;
+	flex: none;
+	position: relative; 
 }
 
-.title {
-	width: 90vw;
-	height: 90vh;
-	color: #353535;
-	opacity: .8;
-	font-family: "LaPaloma";
-	font-weight: 700;
-	font-size: calc(.5em + 10vmin);
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.content {
+	min-width: calc(200px + 10vmin);
+	width: calc(360px + 10vmin);
+	max-width: 95vw;
+	max-height: 99vh;
+	padding: 5vmin;
 }
 
-.title-text {
-	padding-top: 10vmin;
-}
-
-.content-section {
-	font-family: MaruBuri-Regular;
-	font-size: calc(.5em + 1.2vmin);
-	color: #555555;
-	text-shadow: 0px 0px 1.5px #636363;
+.content > div {
+	max-width: 360px;
 }
 
 .card {
@@ -124,106 +118,112 @@ section {
 	z-index: 2;
 }
 
-.content-section .content {
-	word-break: keep-all;
-	line-height: 2;
-	position: absolute;
-	top: 50%; left: 50%;
-	transform: translate(-50%, -50%);
-	max-width: 640px;
-	max-height: 95vh;
-	margin: auto;
-	padding: 1vh 2vw;
+.frontmatter {
+	background-image: url("../assets/img/bg-masthead-min.jpg");
 }
 
-.content-section > .card {
-	width: calc(200px + 10vw);
-}
-
-.content-section .image {
-	width: 100vw;
-	height: 100vh;
-	min-width: 100%;
-	min-height: 100%;
-	margin-top: 1px;
-	background-position: center;
-	background-size: cover;
-	background-overflow: hidden;
-}
-
-.invitation-message .image {
+.invitation-message {
 	background-image: url("../assets/img/DSC05587-min.jpg");
 }
 
-.info .image{
+.info {
 	background-image: url("../assets/img/DSC05460-min.jpg");
 }
 
-.contact .image {
+.contact {
 	background-image: url("../assets/img/DSC05990-min.jpg");
 }
 
-
-@media only screen and (max-width: 389px){
+@media only screen and (max-width: 389px) {
 	
-	.invitation-message .image {
+	.invitation-message {
 		background-image: url("../assets/img/DSC05587-min-mobile.jpg");
 	}
 
-	.info .image{
+	.info {
 		background-image: url("../assets/img/DSC05460-min-mobile.jpg");
 	}
 
-	.contact .image {
+	.contact {
 		background-image: url("../assets/img/DSC05990-min-mobile.jpg");
 	}
 	
 }
 
-@media only screen and (max-height: 389px){
+@media only screen and (max-height: 389px) {
 	
-	.invitation-message .image {
+	html {
+		scroll-snap-points-y: repeat(99.998vh);
+		scroll-snap-type: y proximity;
+	}
+	
+	.content {
+		padding: 1vmin 8vmin;
+	}
+	
+	.invitation-message {
 		background-image: url("../assets/img/DSC05587-min-mobile-landscape.jpg");
 	}
 
-	.contact .image {
+	.contact {
 		background-image: url("../assets/img/DSC05990-min-mobile-landscape.jpg");
 	}
 	
 }
 
+.title {
+	width: 99vw;
+	height: 99vh;
+	color: #bbbbbb;
+	opacity: .75;
+	font-family: "LaPaloma";
+	font-weight: 700;
+	font-size: calc(.5rem + 10vmin);
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.invitation-message {
+	line-height: 2;
+}
+
 .sign {
 	text-align: center;
 	line-height: 1;
-	margin-top: 5vh;
+	margin-top: 5vmin;
 }
 
 .sign em {
 	font-style: normal;
 	font-size: larger;
-	margin-left: 1vmin;
+	margin-left: .5vmin;
 	color: #202020;
 	text-shadow: 0px 0px 1.2px #404040;
 }
 
-.message .symbol {
+.sign .symbol {
 	margin-left: 2.5%;
 	margin-right: 2.5%;
 	font-size: 5vmin;
 	text-shadow: 0px 0px 2px #909090;
-	color: silver;
+	color: #909090;
 }
 
+.info .content {
+	height: 98vh;
+}
 
 .calendar {
+	height: 65vh;
 	text-align: center;
 	color: rgb(21, 41, 77);
 	text-shadow: 0px 0px 1px  rgb(21, 41, 77);
 	font-family: "Bona Nova";
 	font-weight: 600;
 	font-variant: small-caps;
-	padding: 30% 0;
-	padding-bottom: 30vh;
+	position: relative;
 }
 
 .calendar > div {
@@ -245,42 +245,42 @@ section {
 }
 
 .info-text {
-	min-width: 200px;
-	padding: 0  .5em;
+	height: 32vh;
 	text-align: center;
+	position: relative;
+	font-size: smaller;
 }
 
-.contact .content {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 5vh 3vw;
+.info-text div {
+	width: 100%;
+	line-height: 1.5em;
+	padding: .5em;
 }
 
 #map {
+	width: 360px;
+	max-width: 100%;
+	height: calc(360px * .6667);
+	max-height: 50vh;
+	margin: auto;
 	background-image: url("../assets/img/map-min.png");
 	background-position: center center;
 	background-size: contain;
 	background-repeat: no-repeat;
-	width: calc(200px + 8vw);
-	height: calc(11.25*(200px + 8vw)/17);
 	position: relative;
 }
 
 #map a div {
 	width: 80px;
 	height: 80px;
-	position: absolute;
-	top: 50%; left: 50%;
-	transform: translate(-50%, -50%)
 }
 
 #app {
-	width: calc(50vmin + 9rem);
-	max-width: calc(180px + 8vmin);
+	width: 100%;
+	min-width: calc(200px + 10vmin);
 	height: calc(.7rem + 2vmin);
 	margin: auto;
-	margin-bottom: 3vmin;
+	margin-bottom: 3vh;
 }
 
 #app .app-button, #app .app-icon, #app .app-title div {
@@ -297,16 +297,17 @@ section {
 
 #app .app-button {
 	display: inline-block;
-	width: 50%;
-	max-width: calc(85px + 4vmin);
-	height: calc(.8rem + 2vmin);
-	font-size: calc(.4rem + .4vmin);
+	width: 47%;
+	min-width: calc(95px + 3vmin);
+	height: calc(1rem + 2vmin);
+	font-size: calc(.7rem + .4vmin);
 	text-align: center;
 	background: white;
 	opacity: .6;
 	border: 1px solid silver;
 	border-radius: calc(.35rem + 1vmin);
 	position: relative;
+	margin: 0 .5vmin;
 }
 
 #app .app-button .app-icon {
@@ -319,8 +320,7 @@ section {
 }
 
 #app .app-button span {
-	width: 80%;
-	max-width: 80px;
+	width: calc(100px + 20vmin);
 	text-align: center;
 	position: absolute;
 	top: 50%; left: calc(50% + 50% * 1/5);
