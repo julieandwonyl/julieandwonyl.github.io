@@ -80,13 +80,6 @@ body {
 	transform: translate(-50%, -50%);
 }
 
-.force-bottom {
-	position: absolute;
-	top: 100%; left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-
 section {
 	width: 100%;
 	height: 100%;
@@ -109,7 +102,6 @@ section {
 	max-width: 95vw;
 	max-height: 99vh;
 	padding: 5vmin;
-	font-size: calc(5% + 3.8vmin);
 }
 
 .content > div {
@@ -140,9 +132,15 @@ section {
 }
 
 @media only screen and (max-width: 389px) {
-	.title {
-		font-size: calc(1em + 10vmin);
+	
+	.content {
+		font-size: calc(.5em + 2.5vmin);
 	}
+	
+	.title {
+		font-size: calc(1em + 5vmin);
+	}
+	
 	.invitation-message {
 		background-image: None; /* url("../assets/img/DSC05587-min-mobile.jpg"); */
 	}
@@ -159,23 +157,31 @@ section {
 
 @media only screen and (min-width: 389px) {
 	
-	html {
+	/*html {
 		scroll-snap-points-y: repeat(99.998vh);
 		scroll-snap-type: y proximity;
-	}
+	}*/
 	
 	.title {
-		font-size: calc(1em + 7vmin);
+		font-size: calc(1em + 3vmin);
+	}
+	
+	.content {
+		font-size: calc(.2em + 2vmin);
+	}
+	
+	.frontmatter {
+		background-image: url("../assets/img/bg-masthead-min-mobile.jpg");
 	}
 	
 	.invitation-message {
 		background-image: url("../assets/img/DSC05587-min-mobile-landscape.jpg");
 	}
-
+	
 	.contact {
 		background-image: url("../assets/img/DSC05990-min-mobile-landscape.jpg");
 	}
-	
+
 }
 
 .title {
@@ -225,11 +231,14 @@ section {
 }
 
 .info .content {
-	height: 98vh;
+	height: 100%;
+	padding: 0;
 }
 
 .calendar {
+	width: 100%;
 	height: 50%;
+	margin: auto;
 	text-align: center;
 	color: rgb(21, 41, 77);
 	text-shadow: 0px 0px 1px  rgb(21, 41, 77);
@@ -254,6 +263,7 @@ section {
 
 .info-text {
 	height: calc(50% - 5vmin);
+	margin: auto;
 	text-align: center;
 	position: relative;
 }
@@ -262,6 +272,10 @@ section {
 	width: 100%;
 	line-height: 1.5em;
 	padding: .5em;
+	
+	position: absolute;
+	top: 85%; left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 
@@ -287,9 +301,11 @@ section {
 #app {
 	width: 100%;
 	min-width: calc(200px + 10vmin);
-	height: calc(.7rem + 2vmin);
+	height: calc(.5em + 2vmin);
 	margin: auto;
-	margin-bottom: 3vh;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #app a {
@@ -298,16 +314,19 @@ section {
 }
 
 #app .app-button {
-	width: 47%;
-	min-width: calc(95px + 3vmin);
-	font-size: calc(.7rem + .4vmin);
+	/*width: 47%;*/
+	/*min-width: calc(95px + 3vmin);*/
+	height: calc(1.5em + 1.2vmin);
+	
+	font-size: calc(.6em + .5vmin);
 	text-align: center;
 	background: white;
 	opacity: .6;
 	border: 1px solid silver;
 	border-radius: calc(1em + 1.2vmin);
 	position: relative;
-	margin: 0 .5vmin;
+	padding: .2em;
+	margin: 0 1em;
 }
 
 #app .app-button > div {
@@ -326,11 +345,12 @@ section {
 	width: 85%;
 	height: 100%;
 	text-align: center;
+	margin: 0 .5vw;
 }
 
 #loc, #address, #direction {
 	padding: 0 3%;
-	margin-bottom: 1.5vh;
+	margin-bottom: .5vh;
 }
 
 #loc .loc-name {
@@ -345,7 +365,7 @@ section {
 }
 
 #direction .icon {
-	width: 1.8vmin;
-	height: 1.8vmin;
+	width: calc(.8em + .8vmin);
+	height: calc(.8em + .8vmin);
 	opacity: .7;
 }
