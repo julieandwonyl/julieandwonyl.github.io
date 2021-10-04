@@ -65,6 +65,10 @@ body {
 	overflow-x: hidden;
 }
 
+p {
+	margin: 0;
+}
+
 ::selection {
 	background: rgb(235, 203, 185); /* WebKit/Blink Browsers */
 }
@@ -85,6 +89,7 @@ body {
 section {
 	width: 100%;
 	height: 100%;
+	margin: 0;
 	
 	font-family: MaruBuri-Regular;
 	color: #555555;
@@ -119,10 +124,14 @@ section {
 	background-color: rgb(21, 41, 77);
 	background-image: url("../assets/img/bg-masthead-min.jpg");
 }
-
-.invitation-message {
-	background-image: url("../assets/img/DSC05587-min.jpg");
+.title-text-wrapper {
+	width: 100%;
+	height: 100%;
 }
+
+/*.invitation-message {
+	background-image: url("../assets/img/DSC05587-min.jpg");
+}*/
 
 .info {
 	background-image: url("../assets/img/DSC05460-min.jpg");
@@ -137,10 +146,6 @@ section {
 	.content {
 		width: 98%;
 		font-size: calc(.8em + 1vmin);
-	}
-	
-	.title {
-		font-size: calc(1em + 4vmin);
 	}
 	
 	.invitation-message {
@@ -162,23 +167,24 @@ section {
 
 @media only screen and (min-width: 389px) {
 	
-	.title {
-		font-size: calc(1em + 2vmin);
+	.frontmatter {
+		height: 100vw;
+		background-position: center 10%;
+		/*background-image: url("../assets/img/bg-masthead-min-mobile.jpg");*/
 	}
 	
 	.content {
 		font-size: calc(.6em + 1vmin);
 	}
 	
-	.frontmatter {
-		height: 100vh;
-		background-position: center 10%;
-		background-image: url("../assets/img/bg-masthead-min-mobile.jpg");
+	.title-text-wrapper {
+		height: calc(100% + 15vh);
+		position: relative;
 	}
 	
-	.invitation-message {
+	/*.invitation-message {
 		background-image: url("../assets/img/DSC05587-min-mobile-landscape.jpg");
-	}
+	}*/
 	
 	.contact {
 		background-image: url("../assets/img/DSC05990-min-mobile-landscape.jpg");
@@ -195,37 +201,59 @@ section {
 	height: 100%;
 	color: #ffffff;
 	opacity: .65;
+	
 	font-family: "LaPaloma";
 	font-weight: 700;
+	font-size: calc(1em + 2vmin);
 	text-align: center;
 	line-height: 1.5em;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	
 	background-color: #101030;
-	background-image: url("../assets/img/stars.jpg")
+	background-image: url("../assets/img/stars.jpg");
+	
+	position: relative;
 }
 
-.title-text p {
-	margin: 0;
+.title-text {
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.band {
+	height: 15em/*min(30vmax, 300px)*/;
+	
+	background-color: rgb(226 208 201);
+
+	font-size: calc(.8em + 1.2vmin);
+	text-align: right;
+
+	display: flex;
+}
+
+.band-content {
+	min-width: min(100%, calc(280px * 1.5));
+    width: calc(40% * 1.5);
+    max-width: min(100vw, calc(580px * 1.5));	
 }
 
 .invitation-message {
 	line-height: 2;
 }
 
-.sign {
+/*.sign {
 	text-align: center;
 	line-height: 1;
 	margin-top: 8%;
-}
+}*/
 
 .sign em {
 	font-style: normal;
 	font-size: larger;
 	margin-left: .5vmin;
-	color: #202020;
-	text-shadow: 0px 0px 1.2px #404040;
+	/*color: #202020;
+	text-shadow: 0px 0px 1.2px #404040;*/
 }
 
 .sign .symbol {
@@ -237,11 +265,13 @@ section {
 }
 
 .info .content {
+	width: 100%;
+	max-width: 100%;
 	height: 100%;
 	padding: 0;
 }
 
-.calendar {
+.calendar-date {
 	width: 100%;
 	height: 50%;
 	margin: auto;
@@ -254,7 +284,7 @@ section {
 	position: relative;
 }
 
-.calendar > div {
+.calendar-date > div {
 	line-height: .7;
 	font-size: calc(225% + 3vh);
 	position: absolute;
@@ -263,29 +293,113 @@ section {
     transform: translate(-50%, -50%);
 }
 
-.calendar .day {
+.calendar-date .day {
 	line-height: 1;
 }
 
-.calendar .dow {
+.calendar-date .dow {
 	font-size: calc(.5em + .2vh);	
 }
 
 .info-text {
-	height: calc(50% - 5vmin);
+	height: 50%;
 	margin: auto;
+	
 	text-align: center;
 	position: relative;
 }
 
 .info-text div {
 	width: 100%;
+	height: 3em;
 	line-height: 1.5em;
-	padding: .5em;
+	padding: 1em;
+	background: rgb(251 243 235);
+	position: absolute;
+	bottom: 0%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+}
+
+#calendar-section {
+	height: calc(max(1.5vmin, 20px) * 13 + 15em);
+}
+
+#calendar-section > div {
+	vertical-align: top;
+}
+
+.calendar-wrapper {
+	width: calc(15*min(6vmin, 20px));
+	margin: 0 auto;
+	padding: 1em 0;
+	position: relative;
+	vertical-align: top;
+}
+
+.calendar {
+	margin: auto;
+	padding: 0;
+	
+	width: calc(min(6vmin, 20px) * 15);
+	height: calc(min(6vmin, 20px) * 13);
+	table-layout: fixed;
+	
+	font-size: 75%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.calendar tr {
+	margin: 0;
+	padding: 0;
+}
+
+.calendar th, td, th > div {
+	line-height: min(6vmin, 20px);
+	margin: 0;
+	padding: 0;
+}
+
+td.sunday {
+	color:rgb(206 159 151);
+	text-shadow: 0px 0px 1.5px rgb(209 102 102);
+}
+
+td.saturday {
+	color: rgb(206 159 151);
+	text-shadow: 0px 0px 1.5px rgb(206 159 151);
+}
+
+.dday {
+	position: relative;
+}
+
+.dday-marker {
+	width: max(1.7vmin, 22px);
+	height: max(1.7vmin, 22px);
+	line-height: max(1.7vmin, 24px);
+	vertical-align: middle;
+	
+	color: rgb(249 229 210);
+	text-shadow: 0px 0px 1.5px rgb(249 229 210);
+	border: 1px solid rgb(195 157 141);
+	box-shadow: 0 0 5px rgb(195 157 141);
+	background-color: rgb(195 157 141);
+	border-radius: 50%;
 	
 	position: absolute;
-	top: 85%; left: 50%;
+	top: 50%; left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.dday-heart {
+	font-size: 60%;
+	color: rgb(148 16 16 / 90%);
+	text-shadow: 0px 0px 1px rgb(148 16 16);
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -125%);
 }
 
 .force-center {
@@ -314,8 +428,8 @@ section {
 	height: calc(1.5em + 1.2vmin);
 	margin: auto;
 	
-	font-size: calc(.6em + .5vmin);
 	text-align: center;
+	font-size: min(80%, .3em + .5vmax);
 	
 	display: inline-flex;
 	align-items: center;
@@ -352,7 +466,6 @@ section {
 #app .app-button span {
 	width: 85%;
 	height: 100%;
-	text-align: center;
 	margin: 0 .5vw;
 }
 
