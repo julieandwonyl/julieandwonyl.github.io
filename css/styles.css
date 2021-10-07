@@ -127,10 +127,10 @@ section {
 
 .endmatter {
 	width: 100%;
-	height: min(700px, 100vw);
+	height: min(700px, 70vw);
 	background-color: rgb(226 208 201 / 10%);
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 	background-position: center bottom;
 	background-image: linear-gradient(to right, rgb(226 208 201) 0%, rgb(226 208 201) 100%), url("../assets/img/DSC06376-min.jpg");
 	background-blend-mode:color;
