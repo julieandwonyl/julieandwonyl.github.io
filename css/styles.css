@@ -124,6 +124,18 @@ section {
 	background-color: rgb(21, 41, 77);
 	background-image: url("../assets/img/bg-masthead-min.jpg");
 }
+
+.endmatter {
+	width: 100%;
+	height: min(700px, 100vw);
+	background-color: rgb(226 208 201 / 10%);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+	background-image: linear-gradient(to right, rgb(226 208 201) 0%, rgb(226 208 201) 100%), url("../assets/img/DSC06376-min.jpg");
+	background-blend-mode:color;
+}
+
 .title-text-wrapper {
 	width: 100%;
 	height: 100%;
@@ -137,9 +149,9 @@ section {
 	background-image: url("../assets/img/DSC05460-min.jpg");
 }
 
-.contact {
+/*.contact {
 	background-image: url("../assets/img/DSC05990-min.jpg");
-}
+}*/
 
 @media only screen and (max-width: 389px) {
 	
@@ -186,9 +198,9 @@ section {
 		background-image: url("../assets/img/DSC05587-min-mobile-landscape.jpg");
 	}*/
 	
-	.contact {
+	/*.contact {
 		background-image: url("../assets/img/DSC05990-min-mobile-landscape.jpg");
-	}
+	}*/
 	
 	#map {
 		height: calc(30vw * 700 / 1026);
